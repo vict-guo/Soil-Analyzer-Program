@@ -18,7 +18,7 @@ void init_color(){
   pinMode(s2, OUTPUT);
   pinMode(s3, OUTPUT);
   pinMode(out, INPUT);
-  
+
   digitalWrite(s0, HIGH);
   digitalWrite(s1, LOW);
 }
@@ -43,7 +43,7 @@ int red_color(){
   //Serial.print(freqSum/10);//printing RED color frequency
   //Serial.print("  ");
   delay(100);
-  return red1+random(10) ;
+  return freqSum/10 ;
 }
 int green_color(){
   // Setting Green filtered photodiodes to be read
@@ -60,9 +60,9 @@ int green_color(){
     delay(100);
   }
   delay(100);
-  
-  
-  return green1 - random(10);
+
+
+  return freqSum/10;
 }
 
 int blue_color(){
@@ -80,5 +80,5 @@ int blue_color(){
     delay(100);
   }
   delay(100);
-  return blue1 + random(10);
+  return freqSum/10;
 }
